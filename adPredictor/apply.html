@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for AdClarify</title>
+  <link rel="stylesheet" href="/css/apply.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="apply-form">
+    <img src="/assets/Logo.svg" alt="logo" class="logo">
+
+    <h1>Predict your ads <u>for less</u></h1>
+
+		<form action="https://formspree.io/f/mjkzqyrn" method="POST">
+      <input type="hidden" name="_redirect" value="http://127.0.0.1:5500/html/success.html">
+			<label for="fname">Name <span class="required">*</span></label>
+			<input type="text" id="fname" name="fname" required>
+			
+			<label for="femail">Email <span class="required">*</span></label>
+			<input type="email" id="femail" name="femail" required>
+			
+			<label for="fprofile-link">Business / Social profile link <span class="required">*</span></label>
+			<input type="url" id="fprofile-link" name="fprofile-link" required>
+
+			
+			<legend>Approximate monthly Ad Spend <span class="required">*</span></legend>
+      <ul id="fspend-list">
+        <li>
+          <input type="radio" id="f0-1000" name="rspend" value="0-1000" required>
+          <label for="f0-1000">£0 - £1,000</label>
+        </li>
+
+        <li>
+          <input type="radio" id="f1000-5000" name="rspend" value="1000-5000" required>
+          <label for="f1000-5000">£1,000 - £5,000</label>
+        </li>
+
+        <li>
+          <input type="radio" id="f5000-20000" name="rspend" value="5000-20000" required>
+          <label for="f5000-20000">£5,000 - £20,000</label>
+        </li>
+
+        <li>
+          <input type="radio" id="f20000-100000" name="rspend" value="20000-100000" required>
+          <label for="f20000-100000">£20,000 - £100,000</label>
+        </li>
+
+        <li>
+          <input type="radio" id="f100000" name="rspend" value="100000+" required>
+          <label for="f100000">£100,000+</label>
+        </li>
+      </ul>
+
+      <legend>Are you running ads on Meta, TikTok, or both? <span class="required">*</span></legend>
+      <ul>
+        <li>
+          <input type="radio" id="meta-radio" name="ad-choice" value="meta" required>
+          <label for="meta-radio">Meta</label>
+        </li>
+
+        <li>
+          <input type="radio" id="tiktok-radio" name="ad-choice" value="tiktok" required>
+          <label for="tiktok-radio">TikTok</label>
+        </li>
+
+        <li>
+          <input type="radio" id="both-radio" name="ad-choice" value="both" required>
+          <label for="both-radio">Both</label>
+        </li>
+      </ul>
+
+      <label for="reason">Why do you want to join the pilot? <span class="required">*</span></label>
+      <textarea name="reason" id="reason" cols="40" rows="5" required></textarea>
+
+      <label for="fads-link">Link to your ads library <span class="optional">(optional)</span></label>
+      <input type="url" id="fads-link" name="fads-link">
+
+      <button type="submit" class="apply">Submit Application</button>
+		</form>
+	</div>
+</body>
+</html>
