@@ -1,3 +1,6 @@
 {
-  "cleanUrls": true
+  "rewrites": [
+    { "source": "/apply", "destination": "/apply.html" },
+    { "source": "/success", "destination": "/success.html" }
+  ]
 }
