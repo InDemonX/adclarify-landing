@@ -3,4 +3,5 @@
     { "source": "/apply", "destination": "/apply.html" },
     { "source": "/success", "destination": "/success.html" }
   ]
+  "cleanUrls": true
 }
