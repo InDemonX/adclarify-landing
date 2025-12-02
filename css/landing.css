@@ -58,7 +58,6 @@ body {
 	height: 2.5rem;
 	border-radius: 0.5rem;
 	position: relative;
-	margin-left: 12.5%;
 	padding: 0 1rem;
 	border: none;
 	background: linear-gradient(155deg, #A076F9 0% 25%, #7A3FF2 50% 100%);
@@ -73,6 +72,26 @@ body {
 	scale: 1.03;
 	transform: translateY(-2px);
 	background-position: right center;
+}
+
+.button-container {
+	position: relative;
+	width: fit-content;
+	margin-left: 12.5%;
+}
+
+.button-container::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300%;
+	height: 500%;
+	border-radius: 50%;
+	background: radial-gradient(circle at center, #9f76f92d 0% 40%, #08090a 90% 100%);
+	filter: blur(50px);
+	z-index: 0;
 }
 
 .problem-white {
@@ -210,7 +229,7 @@ body {
 		width: 85%;
 	}
 
-	.sub-header, .apply-button {
+	.sub-header, .button-container {
 		margin-left: 7.5%;
 	}
 
@@ -278,3 +297,4 @@ body {
 	}
 
 }
+
