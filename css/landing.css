@@ -147,12 +147,15 @@ body {
 	margin: 10rem auto;
 	padding: 2rem;
 	border: 1px solid #27272F;
-	background: linear-gradient(#1A1A1F 0% 1%, #0f0f12 10% 100%);
+	background: linear-gradient(#1A1A1F 0% 5%, #0f0f12 30% 100%);
+	background-size: 100% 150%;
+	background-position: center top;
 	transition: all 1s;
 }
 
 .included-div:hover {
 	scale: 1.01;
+	background-position: center bottom;
 }
 
 .included-div h2 {
@@ -273,4 +276,5 @@ body {
 		margin: 5rem auto;
 		width: 90%;
 	}
+
 }
