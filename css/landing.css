@@ -8,7 +8,17 @@
 }
 
 body {
-	background-color: #08090a;
+	background-color: #0f1014;
+}
+
+.hero {
+	margin-bottom: 10rem;
+	border: 1px solid #0f1014;
+	height: 100vh;
+	width: 100%;
+	background: radial-gradient(in oklch shorter hue ellipse 55% 75% at bottom, #222227 35%, #0f1014 85%);
+	background-repeat: no-repeat;
+	display: flex;
 }
 
 .logo {
@@ -35,34 +45,38 @@ body {
 }
 
 .header-container {
-	margin-top: 10rem;
-	margin-bottom: 10rem;
+	height: fit-content;
+	margin: auto;
 	position: relative;
 }
 
 .header {
-	width: 75%;
-	margin: 0 auto 1rem auto;
+	width: fit-content;
+	margin: 0 auto 0.25rem auto;
 	font-weight: 500;
 	font-size: 3.5rem;
+	font-family: "Poppins";
 }
 
 .sub-header {
-	margin-left: 12.5%;
+	font-size: 1.125rem;
+	width: fit-content;
 	margin-bottom: 2rem;
 	line-height: 1.5rem;
 	color: #D1D5DB;
 }
 
 .apply-button {
-	height: 2.5rem;
+	font-size: 1.125rem;
+	width: 100%;
+	margin-bottom: 3rem;
 	border-radius: 0.5rem;
 	position: relative;
-	padding: 0 1rem;
+	padding: 0.5rem 1.5rem;
 	border: none;
 	background: linear-gradient(155deg, #A076F9 0% 25%, #7A3FF2 50% 100%);
 	background-size: 200% 100%;
-	background-position: center center;
+	background-position: right center;
 	transition: 0.4s ease-out;
 	z-index: 2;
 }
@@ -71,16 +85,17 @@ body {
 	cursor: pointer;
 	scale: 1.03;
 	transform: translateY(-2px);
-	background-position: right center;
+	background-position: center center;
 }
 
 .button-container {
 	position: relative;
 	width: fit-content;
-	margin-left: 12.5%;
+	margin: 0 auto;
+	transition: 0.1s all ease-in;
 }
 
-.button-container::before {
+/* .button-container::before {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -89,17 +104,43 @@ body {
 	width: 300%;
 	height: 500%;
 	border-radius: 50%;
-	background: radial-gradient(circle at center, #9f76f92d 0% 40%, #08090a 90% 100%);
+	background: radial-gradient(circle at center, #9f76f92d 0% 20%, #0f1014 60% 100%);
 	filter: blur(50px);
 	z-index: 0;
+} */
+
+.phrases {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.phrase {
+	padding: 0.5rem 1rem;
+	font-size: 1.125rem;
+	border: 1px solid #27272F;
+	border-radius: 100px;
+	background: linear-gradient(0deg, #000, #0f1014 50% 100%);
+	background-size: 100% 200%;
+	background-position: center top;
+	transition: all 0.2s ease-in;
+}
+
+.phrase:hover {
+	background-position: center bottom;
 }
 
 .problem-white {
+	font-size: 2.75rem;
+	font-weight: 500;
 	text-align: center;
-	line-height: 1.5rem;
+	line-height: 4rem;
+	font-family: "Poppins";
 }
 
 .problem-grey {
+	font-size: 1.125rem;
 	text-align: center;
 	line-height: 1.5rem;
 	color: #D1D5DB;
@@ -111,7 +152,7 @@ body {
 
 .how-it-works-container {
 	display: flex;
-	margin: 10rem 0;
+	margin: 5rem 0 10rem 0;
 	position: relative;
 	justify-content: center;
 	gap: 1rem;
@@ -123,16 +164,16 @@ body {
 	height: 18rem;
 	width: 17.5rem;
 	position: relative;
-	border-radius: 10px;
-	background: linear-gradient(#1A1A1F 0% 5%, #0f0f12 30% 100%);
-	background-size: 100% 150%;
-	background-position: center top;
+	border-radius: 20px;
+	background: linear-gradient(110deg, #000, #0f1014 50% 100%);
+	background-size: 150% 100%;
+	background-position: right center;
 	transition: all 0.3s ease-out;
 	border: 1px solid #27272F;
 }
 
 .how-it-works-card:hover {
-	background-position: center bottom;
+	background-position: left center;
 }
 
 .how-it-works-icon {
@@ -156,31 +197,42 @@ body {
 }
 
 .included-section {
-	padding: 2.5rem 0;
-	background: linear-gradient(#19191c 0%, #08090a 30% 100%);
+	height: 100vh;
+	background: #222227;
+	display: flex;
+	align-items: center;
 }
 
 .included-div {
-	width: fit-content;
-	border-radius: 10px;
-	margin: 10rem auto;
-	padding: 2rem;
-	border: 1px solid #27272F;
-	background: linear-gradient(#1A1A1F 0% 5%, #0f0f12 30% 100%);
-	background-size: 100% 150%;
-	background-position: center top;
-	transition: all 1s;
+	height: fit-content;
+	width: 80%;
+	border-bottom-left-radius: 50px;
+	border-top-left-radius: 50px;
+	margin-left: auto;
+	background: linear-gradient(110deg, #000, #0f1014 50% 100%);
+	background-size: 175% 100%;
+	background-position: right center;
+	transition: all 0.3s ease-out;
+	display: flex;
+	flex-direction: row;
 }
 
 .included-div:hover {
-	scale: 1.01;
 	background-position: center bottom;
 }
 
-.included-div h2 {
+.pilot {
+	padding: 4rem;
+	width: 50%;
+	border-bottom-left-radius: 50px;
+	border-top-left-radius: 50px;
+}
+
+.pilot h2 {
 	margin-bottom: 1rem;
 	font-size: 1.25rem;
 	font-weight: 550;
+	font-family: "Poppins";
 }
 
 .included-bullet-points {
@@ -196,23 +248,63 @@ body {
 
 .apply-button2 {
 	width: 100%;
-	margin-left: 0;
+	margin: 1rem 0 0 0;
 }
 
-.credibility-section {
-	padding-bottom: 12.5rem;
-	background: linear-gradient(#08090a 0% 1%, #9f76f92d );
+.pilot2 {
+	margin-left: auto;
+	width: 50%;
+	background: whitesmoke;
+	color: black;
+	border-bottom-left-radius: 50px;
+	border-top-left-radius: 50px;
+	padding: 2rem;
 }
 
-.credibility {
-	width: 75%;
-	margin-left: 12.5%;
+.pilot2 p{
+	color: black;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1.125rem;
+	font-family: "Poppins";
 	text-align: center;
-	color: #D1D5DB;
+	line-height: 2.625rem;
 }
 
-.credibility span {
-	color: white;
+.pilot2 span {
+	color: black;
+	font-family: "Poppins";
+	font-size: 1.75rem;
+}
+
+.final-section {
+	border-top: 1px solid #222227;
+	background-repeat: no-repeat;
+}
+
+.final-companion {
+	margin: 10rem auto 0 auto;
+	font-weight: 500;
+	font-size: 2.75rem;
+	line-height: 4.125rem;
+	font-family: "Poppins";
+	width: 50%;
+	text-align: center;
+}
+
+.apply-button3 {
+	width: fit-content;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0.5rem 1.5rem;
+	margin-top: 2rem;
+	margin-bottom: 10rem;
+}
+
+.apply-button3:hover {
+  transform: translateX(-50%) 
 }
 
 @media (max-width: 768px) {
@@ -295,6 +387,4 @@ body {
 		margin: 5rem auto;
 		width: 90%;
 	}
-
 }
-
